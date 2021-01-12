@@ -34,27 +34,38 @@ import os
 # for i in glob.glob("*.py"):
 #     print(i)
 
-from pathlib import Path
-import os
+# from pathlib import Path
+# import os
+#
+# print("abspath", os.path.abspath("."))
+# print("realpath", os.path.realpath("."))
+# cur = Path.cwd()
+# path = Path(cur)
+# path = path / "os_.py"
+# print(path.parts)
+# print(path.parent)
+# print(path.name)
+# print(path.suffix)
+# print(path.stem)
+# print(path.exists())
+# print(list(path.parent.glob(".py")))
+# print(path.is_dir())
+# print(path.is_file())
+# for i in path.parent.iterdir():
+#     print(i)
+#
+# (path.parent / "test").mkdir(parents=True)
+# (path.parent / "test").rename(path.parent / "test1")
 
-print("abspath", os.path.abspath("."))
-print("realpath", os.path.realpath("."))
-cur = Path.cwd()
-path = Path(cur)
-path = path / "os_.py"
-print(path.parts)
-print(path.parent)
-print(path.name)
-print(path.suffix)
-print(path.stem)
-print(path.exists())
-print(list(path.parent.glob(".py")))
-print(path.is_dir())
-print(path.is_file())
-for i in path.parent.iterdir():
-    print(i)
+# path.rmdir()
 
-(path.parent / "test").mkdir(parents=True)
-(path.parent / "test").rename(path.parent / "test1")
+import sys
 
-path.rmdir()
+
+print(__file__)
+print(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(__file__))
+
+
+file_list = ["data1.txt", "data2.txt"]
+os.system("cat %s > %s" % (" ".join(file_list), "data.txt"))

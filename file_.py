@@ -29,5 +29,16 @@ with open("./test.csv", "r", encoding="utf-8") as fp:
     data = csv.reader(fp)
     print(list(data))
 
+import yaml
+
+fp = open("./config.yaml", "r")
+data = yaml.load(fp, Loader=yaml.FullLoader)
+fp.close()
+print(data)
+
+fo = open("./config2.yaml", "w")
+yaml.dump(data, fo)
+fo.close()
+
 
 
