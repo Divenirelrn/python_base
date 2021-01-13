@@ -33,6 +33,10 @@ print(a)
 a.sort(reverse=True)
 print(a)
 
+a = [{'name':'homer', 'age':39}, {'name':'bart', 'age':10}, {'name':'aart', 'age':20}, {'name':'aart', 'age':10}]
+a.sort(key=lambda x: x["age"])
+print(a)
+
 #拷贝
 b = a
 print(id(b), id(a))
