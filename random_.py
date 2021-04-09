@@ -12,3 +12,8 @@ print(random.choice("i love xiaojun"))
 a = [1,2,3,4,5]
 random.shuffle(a)
 print(a)
+
+#随机数种子
+for i in range(10):
+    random.seed(0) #每次产生的随机数序列相同
+    random.random()
