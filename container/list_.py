@@ -37,6 +37,11 @@ a = [{'name':'homer', 'age':39}, {'name':'bart', 'age':10}, {'name':'aart', 'age
 a.sort(key=lambda x: x["age"])
 print(a)
 
+l = [[0,1],[4,9],[2,6],[5,7]]
+# l.sort(key=lambda x: x[1], reverse=True)
+l = sorted(l, key=lambda x: x[1])
+print(l)
+
 #拷贝
 b = a
 print(id(b), id(a))
