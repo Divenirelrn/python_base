@@ -45,7 +45,8 @@ print(l)
 #拷贝
 b = a
 print(id(b), id(a))
-b = a[:] #浅拷贝
+b = a[:] #浅拷贝（只拷贝第一层）
+b = a.copy() #浅拷贝（只拷贝第一层）
 print(id(b))
 
 #列表转化为字符串

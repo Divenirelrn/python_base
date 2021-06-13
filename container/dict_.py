@@ -11,7 +11,7 @@ a.pop(1)
 print(a)
 
 #拷贝
-b = a.copy()
+b = a.copy() #浅拷贝（只拷贝第一层）
 print(b)
 
 #清除
